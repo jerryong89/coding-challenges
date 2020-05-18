@@ -10,3 +10,7 @@ Notes
 N/A
 
 My Solution
+
+function equation(s) {
+	return eval(s)
+}
