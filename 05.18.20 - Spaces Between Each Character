@@ -9,3 +9,9 @@ spaceMeOut("elongated musk") ➞ "e l o n g a t e d   m u s k"
 
 Notes
 Treat a space as its own character (i.e. leave three spaces between words).
+
+My Solution
+function spaceMeOut(str) {
+	var word = str.split('')
+	return word.join(' ')
+}
