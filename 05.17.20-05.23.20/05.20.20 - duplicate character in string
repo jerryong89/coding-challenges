@@ -1,0 +1,20 @@
+// create function that takes string and return string that each character is repeated once
+
+//input: "hello"
+// output: "hheelllloo"
+
+// create a function
+// create a container for new word
+// iterate through the string with index
+// copy the character
+// concat the copied character
+
+function copy(string){
+ let word = "";
+  for (let i = 0; i< string.length; i++){
+      word += string[i]+string[i]
+   }
+  return word
+}
+
+copy("hello")
