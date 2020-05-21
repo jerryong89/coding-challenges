@@ -10,3 +10,10 @@ isTriangle(4, 3, 8) ➞ false
 Notes
 a, b and, c are the side lengths of the triangles.
 Test input will always be three positive numbers.
+
+My Solution
+function isTriangle(a, b, c) {
+	if ( a + b > c && a+c > b && b+c>a){
+		return true
+	} else return false
+}
