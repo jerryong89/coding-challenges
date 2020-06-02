@@ -1,0 +1,30 @@
+//1108. Defanging an IP Address
+//Given a valid (IPv4) IP address, return a defanged version of that IP address.
+
+//A defanged IP address replaces every period "." with "[.]".
+//Example 1:
+//Input: address = "1.1.1.1"
+//Output: "1[.]1[.]1[.]1"
+//Example 2:
+//Input: address = "255.100.50.0"
+//Output: "255[.]100[.]50[.]0"
+
+// write a function
+// write a loop to interate throuhg the string
+// look for periods
+// add a opening bracket before that location of period character
+// add a closing bracket after the location of the period character
+
+My Solution
+
+function add(word){
+  let newWord = "";
+  for (let i = 0; i < word.length; i++){
+    if (word[i] === "."){
+        newWord = newWord + "[.]"
+    } else newWord = newWord + word[i]
+  }
+  return newWord
+}
+
+add("1.1.1.1")
