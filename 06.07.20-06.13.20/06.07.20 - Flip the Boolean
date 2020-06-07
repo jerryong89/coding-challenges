@@ -1,0 +1,23 @@
+Flip the Boolean
+Booleans can also be written as integers, where 1 = True and 0 = False. Make a function that returns the opposite of the boolean given.
+
+Examples
+flipBool(true) ➞ 0
+
+flipBool(false) ➞ 1
+
+flipBool(1) ➞ 0
+
+flipBool(0) ➞ 1
+Notes
+N/A
+
+My Solution 
+
+function flipBool(b) {
+	if (b === 0 || b === false){
+		return 1
+	} else if (b === 1 || b === true){
+		return 0
+	}
+}
