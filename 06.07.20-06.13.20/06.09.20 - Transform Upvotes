@@ -1,0 +1,29 @@
+Transform Upvotes
+Create a function that transforms a string of upvote counts into an array of numbers. Each k represents a thousand.
+
+Examples
+transformUpvotes("6.8k 13.5k") ➞ [6800, 13500]
+
+transformUpvotes("5.5k 8.9k 32") ➞ [5500, 8900, 32]
+
+transformUpvotes("20.3k 3.8k 7.7k 992") ➞ [20300, 3800, 7700, 992]
+Notes
+Return the upvotes as an array.
+
+My Solution
+
+function transformUpvotes(str) {
+  let word = str.split(" ")
+  let newArray = []
+  for (let i = 0; i < word.length; i++){
+    for (let j= 0; j < word[i].length; j++){
+      if (word[i][j] === "k"){
+      newArray.push((word[i].slice(0,-1))*1000)
+       }
+      }
+      if (word[i].includes("k") === false){
+        newArray.push(word[i]*1)
+      }
+    }
+    return newArray
+  }
