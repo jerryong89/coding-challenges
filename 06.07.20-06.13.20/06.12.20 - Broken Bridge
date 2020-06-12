@@ -1,0 +1,20 @@
+Broken Bridge
+Create a function which validates whether a bridge is safe to walk on (i.e. has no gaps in it to fall through).
+
+Examples
+isSafeBridge("####") ➞ true
+
+isSafeBridge("## ####") ➞ false
+
+isSafeBridge("#") ➞ true
+Notes
+You can expect the bridge's ends connecting it to its surrounding.
+
+My Solution
+
+function isSafeBridge(str) {
+	let dude = str.split(" ")
+	if (dude.length === 1){
+		return true
+	} else return false
+}
