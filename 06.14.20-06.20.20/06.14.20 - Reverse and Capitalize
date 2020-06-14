@@ -1,0 +1,20 @@
+Reverse and Capitalize
+Create a function that takes a string of lowercase characters and returns that string reversed and in upper case.
+
+Examples
+reverseCapitalize("abc") ➞ "CBA"
+
+reverseCapitalize("hellothere") ➞ "EREHTOLLEH"
+
+reverseCapitalize("input") ➞ "TUPNI"
+
+My Solution
+
+function reverseCapitalize(str) {
+	let result = [];
+	let newWord = str.toUpperCase()
+	for (let i = str.length; i >= 0; i--){
+		result.push(newWord[i])
+	}
+	return result.join("")
+}
