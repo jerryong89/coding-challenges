@@ -1,0 +1,29 @@
+Maximum Difference
+Given an array of integers, return the difference between the largest and smallest integers in the array.
+
+Examples
+difference([10, 15, 20, 2, 10, 6]) ➞ 18
+// 20 - 2 = 18
+
+difference([-3, 4, -9, -1, -2, 15]) ➞ 24
+// 15 - (-9) = 24
+
+difference([4, 17, 12, 2, 10, 2]) ➞ 15
+
+My Solution
+
+function difference(nums) {
+	let high = nums[0]
+	let low = nums[0]
+	for (let i = 0; i < nums.length; i++){
+		if (high < nums[i]){
+			high = nums[i]
+		}
+	}
+	for (let i = 0; i < nums.length; i++){
+		if (low > nums[i]){
+			low = nums[i]
+		}
+	}
+	return high - low
+}
