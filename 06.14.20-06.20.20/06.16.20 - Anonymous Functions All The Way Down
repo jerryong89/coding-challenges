@@ -1,0 +1,15 @@
+Anonymous Functions All The Way Down
+Create a function which takes a parameter n and returns a function such that it, when called n times, returns the string "edabit".
+
+Examples
+lambdaDepth(0) ➞ "edabit"
+
+lambdaDepth(1)() ➞ "edabit"
+
+lambdaDepth(2)()() ➞ "edabit"
+
+typeof lambdaDepth(2)() ➞ "function"
+
+My Solution
+
+lambdaDepth = n => eval('() => '.repeat(n) + '"edabit"')
