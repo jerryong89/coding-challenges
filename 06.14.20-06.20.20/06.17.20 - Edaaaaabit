@@ -1,0 +1,19 @@
+Edaaaaabit
+Write a function that takes an integer and returns a string with the given number of "a"s in Edabit.
+
+Examples
+howManyTimes(5) ➞ "Edaaaaabit"
+
+howManyTimes(0) ➞ "Edbit"
+
+howManyTimes(12) ➞ "Edaaaaaaaaaaaabit"
+
+My Solution
+
+function howManyTimes(num) {
+	let word = ""
+	for (let i = 0; i < num -1; i++){
+		word+= "a"
+	}
+	return `Eda${word}bit`
+}
