@@ -1,0 +1,25 @@
+Is the String in Order?
+Create a function that takes a string and returns true or false, depending on whether the characters are in order or not.
+
+Examples
+isInOrder("abc") ➞ true
+
+isInOrder("edabit") ➞ false
+
+isInOrder("123") ➞ true
+
+isInOrder("xyzz") ➞ true
+
+My Solution
+
+function isInOrder(str) {
+	let word = str.split("")
+	let words = word.sort()
+	let wordss = ""
+	for (let i = 0; i < str.length; i++){
+		wordss += words[i]
+	}
+	if (str === wordss){
+		return true
+	} else return false
+}
