@@ -1,0 +1,22 @@
+Word Endings
+Create a function that adds a string ending to each member in an array.
+
+Examples
+addEnding(["clever", "meek", "hurried", "nice"], "ly")
+➞ ["cleverly", "meekly", "hurriedly", "nicely"]
+
+addEnding(["new", "pander", "scoop"], "er")
+➞ ["newer", "panderer", "scooper"]
+
+addEnding(["bend", "sharpen", "mean"], "ing")
+➞ ["bending", "sharpening", "meaning"]
+
+My Solution
+
+function addEnding(arr, ending) {
+	let result = [];
+	for (let i = 0; i < arr.length; i++){
+		result.push(arr[i]+ending)
+	}
+	return result
+}
