@@ -1,0 +1,21 @@
+Minimum Removals to Make Sum Even
+Create a function that returns the minimum number of removals to make the sum of all elements in an array even.
+
+Examples
+minimumRemovals([1, 2, 3, 4, 5]) ➞ 1
+
+minimumRemovals([5, 7, 9, 11]) ➞ 0
+
+minimumRemovals([5, 7, 9, 12]) ➞ 1
+
+My Solution
+
+function minimumRemovals(arr) {
+	let counter = 0;
+	for (let i = 0; i < arr.length; i++){
+		counter += arr[i]
+	}
+	if (counter % 2 === 0 ){
+		return 0
+	} else return 1
+}
