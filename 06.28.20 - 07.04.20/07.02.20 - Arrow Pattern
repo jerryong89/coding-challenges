@@ -1,0 +1,41 @@
+Arrow Pattern
+Create a function that creates a pattern as a 2D array for a given number.
+
+Examples
+ >
+ >>
+ >>>
+ >>
+ >
+
+arrow(3) ➞ [">", ">>", ">>>", ">>", ">"]
+
+ >
+ >>
+ >>>
+ >>>>
+ >>>>
+ >>>
+ >>
+ >
+
+arrow(4) ➞ [">", ">>", ">>>", ">>>>", ">>>>", ">>>", ">>", ">"]
+
+My Solution
+
+function arrow(n) {
+	let result = [];
+  let arrow = ">"
+  let apple = 2
+  if (n % 2 === 0){
+    apple = 1
+  } else apple =2
+  for (let i = 0; i < n; i++){
+    result.push(arrow)
+    arrow += ">"
+  }
+  for (let j = n - apple; j>=0; j--){
+    result.push(result[j])
+  }
+  return result
+}
