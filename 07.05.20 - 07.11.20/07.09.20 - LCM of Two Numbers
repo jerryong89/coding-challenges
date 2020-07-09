@@ -1,0 +1,33 @@
+LCM of Two Numbers
+Write a function that returns the least common multiple (LCM) of two integers.
+
+Examples
+lcm(9, 18) ➞ 18
+
+lcm(8, 5) ➞ 40
+
+lcm(17, 11) ➞ 187
+
+Notes
+Both values will be positive.
+The LCM is the smallest integer that divides both numbers such that the remainder is zero.
+
+My Solution
+
+function lcm(n1, n2) {
+	let n1array = [n1]
+	let n2array = [n2]
+	let counter1 = n1
+	let counter2 = n2
+	for (let i = 0; i < 30; i++){
+		n1array.push(counter1+= n1)
+		n2array.push(counter2+= n2)
+	}
+	for (let k = 0; k < n1array.length; k++){
+		for (let l = 0; l <n2array.length; l++){
+				if (n1array[k] === n2array[l]) {
+					return n2array[l]
+				}
+		}
+	}
+}
