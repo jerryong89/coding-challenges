@@ -1,0 +1,21 @@
+Repeating Letters N Times
+Create a function that repeats each character in a string n times.
+
+Examples
+repeat("mice", 5) ➞ "mmmmmiiiiiccccceeeee"
+
+repeat("hello", 3) ➞ "hhheeellllllooo"
+
+repeat("stop", 1) ➞ "stop"
+
+My Solution
+
+function repeat(str, n) {
+	let result = "";
+	for (let i = 0; i < str.length; i++) {
+		for (let j = 0; j < n; j++){
+			result += str[i]
+		}
+	}
+	return result
+}
