@@ -1,0 +1,28 @@
+Get the File Extension
+Write a function that maps files to their extension names.
+
+Examples
+getExtension(["code.html", "code.css"])
+➞ ["html", "css"]
+
+getExtension(["project1.jpg", "project1.pdf", "project1.mp3"])
+➞ ["jpg", "pdf", "mp3"]
+
+getExtension(["ruby.rb", "cplusplus.cpp", "python.py", "javascript.js"])
+➞ ["rb", "cpp", "py", "js"]
+
+https://edabit.com/challenge/8A9E8LdE6zXcmPX3W
+
+My Solution
+
+function getExtension(arr) {
+	let result = [];
+	let result2 = [];
+	for (let i = 0; i < arr.length; i++) {
+		result.push(arr[i].split("."))
+	}
+	for (let j = 0; j < result.length; j++) {
+		result2.push(result[j][1])
+	}
+	return result2
+}
