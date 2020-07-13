@@ -1,0 +1,29 @@
+Seven Boom!
+Create a function that takes an array of numbers and return "Boom!" if the number 7 appears in the array. Otherwise, return "there is no 7 in the array".
+
+Examples
+sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+
+sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+
+sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+
+https://edabit.com/challenge/6R6gReGTGwzpwuffD
+
+My Solution
+
+function sevenBoom(arr) {
+	let regex = /7+/g
+	let result = []
+	for (let j = 0; j <arr.length; j++) {
+		result.push(arr[j] +"")
+	}
+	console.log(result)
+	console.log(result[0].match(regex), result[2].match(regex))
+	for (let i = 0; i < result.length; i++) {
+		if	(result[i].match(regex) !== null){
+			return "Boom!"
+	}
+}
+	return "there is no 7 in the array"
+}
