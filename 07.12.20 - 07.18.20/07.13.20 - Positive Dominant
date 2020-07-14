@@ -29,8 +29,6 @@ function isPositiveDominant(a) {
                 uniqueArray.push(a[i]);
             }
         }
-	console.log(uniqueArray)
-	
 	for (let i = 0; i < uniqueArray.length; i++) {
 		if (uniqueArray[i] > 0) {
 			counter++
