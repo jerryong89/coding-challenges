@@ -1,0 +1,45 @@
+Western Showdown
+Wild Roger is participating in a Western Showdown, meaning he has to draw (pull out and shoot) his gun faster than his opponent in a gun standoff.
+
+Given two strings,p1 and p2, return which person drew their gun the fastest. If both are drawn at the same time, return "tie".
+
+Examples
+showdown(
+  "   Bang!        ",
+  "        Bang!   "
+) ➞ "p1"
+
+// p1 draws his gun sooner than p2
+
+showdown(
+  "               Bang! ",
+  "             Bang!   "
+) ➞ "p2"
+
+showdown(
+  "     Bang!   ",
+  "     Bang!   "
+) ➞ "tie"
+
+My Solution
+
+function showdown(p1, p2) {
+	let first = 0;
+	let second = 0;
+	for (let i = 0; i < p1.length; i++) {
+		if (p1[i] === "B" && p2[i] === "B"){
+			return "tie"
+		}
+		if (p1[i] === "B") {
+			first++
+			break
+		}
+		if (p2[i] === "B") {
+			second++
+			break
+		}
+	}
+	if (first > second) {
+		return "p1"
+	} else return "p2"
+}
