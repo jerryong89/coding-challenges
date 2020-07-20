@@ -1,0 +1,28 @@
+Longest Word
+Write a function that finds the longest word in a sentence and returns it. If two or more words are the biggest, return the word closest to the start of the sentence. Characters such as apostophe, commas, periods, etc count as letters (e.g. O'Connor is 8 characters long).
+
+Examples
+longestWord("Hello darkness my old friend") ➞ "darkness"
+
+longestWord("Hello there mate") ➞ "Hello"
+
+longestWord("Kayla's toy is plastic") ➞ "Kayla's"
+
+https://edabit.com/challenge/GL628YEyxRzSNKRxJ
+
+My Solution
+
+function longestWord(sentence) {
+	let hi = sentence.split(" ")
+	let result = hi[0].length
+	let index = 0
+	
+	for (let i = 0; i < hi.length; i++) {
+		if (result < hi[i].length){
+			result = hi[i].legnth
+			index = i
+		}
+	}
+	
+	return hi[index]
+}
