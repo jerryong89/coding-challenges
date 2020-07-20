@@ -1,0 +1,46 @@
+Layers in a Rug
+Write a function that counts how many concentric layers a rug.
+
+Examples
+countLayers([
+  "AAAA",
+  "ABBA",
+  "AAAA"
+]) ➞ 2
+
+countLayers([
+  "AAAAAAAAA",
+  "ABBBBBBBA",
+  "ABBAAABBA",
+  "ABBBBBBBA",
+  "AAAAAAAAA"
+]) ➞ 3
+
+countLayers([
+  "AAAAAAAAAAA",
+  "AABBBBBBBAA",
+  "AABCCCCCBAA",
+  "AABCAAACBAA",
+  "AABCADACBAA",
+  "AABCAAACBAA",
+  "AABCCCCCBAA",
+  "AABBBBBBBAA",
+  "AAAAAAAAAAA"
+]) ➞ 5
+
+https://edabit.com/challenge/8khL2WEhZ6M9onHL4
+
+My Solution
+
+function countLayers(rug) {
+	let hi = rug[(rug.length/2) + .5  -1]
+	let counter = 1;
+	
+	for (let i = 0; i < (hi.length/2) -.5; i++) {
+		if (hi[i] !== hi[i+1]){
+			counter++
+		}
+	}
+
+	return counter
+}
