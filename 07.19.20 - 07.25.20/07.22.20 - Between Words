@@ -1,0 +1,26 @@
+Between Words
+Write a function that takes three string arguments (first, last, and word) and returns true if word is found between first and last in the dictionary, otherwise false.
+
+Examples
+isBetween("apple", "banana", "azure") ➞ true
+
+isBetween("monk", "monument", "monkey") ➞ true
+
+isBetween("bookend", "boolean", "boost") ➞ false
+Notes
+All letters will be in lowercase.
+All three words will be different.
+Remember that the string word is in the middle.
+
+https://edabit.com/challenge/j63YSGGK9xoLiXCKF
+
+My Solution
+
+function isBetween(first, last, word) {
+	const arr = [first, word, last]
+	let arr2 = [first, word, last].sort()
+
+	if (arr[0] === arr2[0] && arr[1] === arr2[1] && arr[2] === arr2[2]){
+		return true
+	} else return false
+	}
