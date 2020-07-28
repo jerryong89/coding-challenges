@@ -44,3 +44,16 @@ function countBoomerangs(arr) {
 	}
 	return counter
 }
+
+
+function countBoomerangs(arr) {
+	let counter = 0
+	
+	for (let j = 0; j < arr.length; j++) {
+		if (arr[j] === arr[j+2] && arr[j] !== arr[j+1]){
+			counter++
+		}
+	}
+	
+	return counter
+}
