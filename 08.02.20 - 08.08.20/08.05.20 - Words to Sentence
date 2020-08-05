@@ -1,0 +1,47 @@
+Words to Sentence
+Create a function that turns an array of words into a comma separated list, where the last word is separated by the word "and".
+
+Examples
+wordsToSentence(["edabit"]) ➞ "edabit"
+
+wordsToSentence(["Hello", "", "Bye"]) ➞ "Hello and Bye"
+
+wordsToSentence(["Hello", "Bye", "See you soon"]) ➞ "Hello, Bye and See you soon"
+Notes
+null values, empty arrays or arrays with only empty or null values should return an empty string (e.g. "").
+
+https://edabit.com/challenge/ddXhrbFi4ozxxgYdG
+
+My Solution
+
+function wordsToSentence(words) {
+	if (words === null) {
+		
+		return ""
+		
+	}
+	
+	let result = "";
+	let word = []
+	
+	for (let i = 0; i < words.length; i++){
+		
+		if (words[i].length !== 0) {
+			word.push(words[i])
+		}
+		
+	}
+	
+		for (let i = 0; i < word.length; i++) {
+			
+		if (i === 0) {
+			result += word[i]
+		} else if (i === word.length - 1) {
+			result += " and " + word[i]
+		} else {result += ", " + word[i]
+				}
+			
+	}
+	
+	return result
+}
