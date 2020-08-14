@@ -1,0 +1,29 @@
+A Long Long Time
+Create a function that takes three values:
+
+h hours
+m minutes
+s seconds
+Return the value that's the longest duration.
+
+Examples
+longestTime(1, 59, 3598) ➞ 1
+
+longestTime(2, 300, 15000) ➞ 300
+
+longestTime(15, 955, 59400) ➞ 59400
+
+https://edabit.com/challenge/9fpBX9AFizhDeFk8R
+
+My Solution
+
+function longestTime(h, m, s) {
+	let hour = h * 60 * 60
+	let minute = m * 60
+	
+	if (hour > minute && hour > s) {
+		return h
+	} else if (minute > hour && minute > s) {
+		return m
+	} else return s
+}
