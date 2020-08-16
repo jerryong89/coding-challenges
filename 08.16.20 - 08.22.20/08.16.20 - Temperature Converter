@@ -1,0 +1,32 @@
+Temperature Converter
+Create a function that converts Celcius to Fahrenheit and vice versa.
+
+Examples
+convert("35°C") ➞ "95°F"
+
+convert("19°F") ➞ "-7°C"
+
+convert("33") ➞ "Error"
+
+https://edabit.com/challenge/9CNJtMXaw2K5NwMLJ
+
+My Solution
+
+function convert(deg) {
+	if (deg[deg.length -1] === "F" || deg[deg.length -1] === "C") {
+	let value = ""
+
+	for (let i = 0; i < deg.length; i++) {
+		if (deg[i] === "°") {
+			break
+		}
+		value += deg[i]
+	}
+	
+	if (deg[deg.length -1] === "F") {
+		return Math.round((value - 32) * 5/9) + "°C"
+	} else
+		return Math.round((value * 9/5) + 32) + "°F"
+	}
+	return "Error"
+}
