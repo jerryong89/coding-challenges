@@ -1,0 +1,30 @@
+Count Number of Identical Arrays
+Create a function that takes four arrays as arguments and returns a count of the total number of identical arrays.
+
+Examples
+countIdenticalArrays([0, 0, 0], [0, 1, 2], [0, 0, 0], [2, 1, 0]) ➞ 2
+
+countIdenticalArrays([0, 1, 0], [0, 1, 2], [0, 2, 0], [2, 1, 0]) ➞ 0
+
+countIdenticalArrays([0, 1, 2], [0, 1, 2], [0, 1, 2], [2, 1, 0]) ➞ 3
+
+https://edabit.com/challenge/adJw7Rq3dnDGSZkX5
+
+My Solution
+
+function countIdenticalArrays(arr1, arr2, arr3, arr4) {
+	let counter = 0;
+	let all = [...arguments]
+	
+	for (let i = 1; i <= all.length - 1 ; i++) {
+		if (counter === 0) {
+			if (arr1[0] === all[i][0] && arr1[1] === all[i][1] && arr1[2] === all[i][2]) {
+			counter +=2
+		} 
+		} else if (arr1[0] === all[i][0] && arr1[1] === all[i][1] && arr1[2] === all[i][2]) {
+			counter++
+		}
+	}
+	
+	return counter
+}
