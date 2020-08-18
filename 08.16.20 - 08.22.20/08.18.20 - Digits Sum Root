@@ -1,0 +1,39 @@
+Digits Sum Root
+Create a function that takes a number and returns one digit that is the result of summing all the digits of the input number. When the sum of the digits consists of more than one digit, repeat summing until you get one digit.
+
+Examples
+rootDigit(123) ➞ 6
+// 1 + 2 + 3 = 6
+
+rootDigit(999888777) ➞ 9
+
+rootDigit(1238763636555555555555) ➞ 6
+Notes
+Recursion is allowed.
+
+https://edabit.com/challenge/4aiWPfNZfpJTZDPSX
+
+My Solution
+
+function rootDigit(n) {
+	let string = n + "";
+	let temp = 0
+	let temp2 = 0
+	let result = 0
+	
+	for (let i = 0; i < string.length; i++) {
+		temp += string[i] * 1
+	}
+	
+	let string2 = temp + ""
+	for (let j = 0; j < string2.length; j++) {
+		temp2 += string2[j] * 1
+	}
+	
+	let string3 = temp2 + ""
+	for (let k = 0; k < string3.length; k++) {
+		result += string3[k] * 1
+	}
+	
+	return result
+}
