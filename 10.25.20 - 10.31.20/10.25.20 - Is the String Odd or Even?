@@ -1,0 +1,21 @@
+Is the String Odd or Even?
+Given a string, return true if its length is even or false if the length is odd.
+
+Examples
+oddOrEven("apples") ➞ true
+
+oddOrEven("pears") ➞ false
+
+oddOrEven("cherry") ➞ true
+Notes
+N/A
+
+https://edabit.com/challenge/2tcuBxn37oouMeErN
+
+My Solution
+
+function oddOrEven(s) {
+	if ( s.length % 2=== 0){
+		return true
+	} else return false
+}
