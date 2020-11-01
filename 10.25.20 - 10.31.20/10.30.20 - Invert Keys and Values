@@ -13,7 +13,7 @@ invert({ "zebra": "koala", "horse": "camel" })
 
 https://edabit.com/challenge/YTECpnCCeJsYqYvfF
 
-My Solution
+My Solution.
 
 function invert(o) {
 	let x = Object.entries(o)
