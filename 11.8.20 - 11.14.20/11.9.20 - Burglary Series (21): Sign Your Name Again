@@ -6,7 +6,7 @@ This challenge is a bit different as the function you are given already contains
 The function receives an object with one nested object as an argument. Your task is:
 
 on the root object: prevent any kind of changes.
-on the nested object: prevent new properties from being added BUT allow for existing properties to be changed.
+on the nested object: prevent new properties from being added BUT allow for existing properties to be changed..
 Examples
 const obj = {
   kitchen: {
