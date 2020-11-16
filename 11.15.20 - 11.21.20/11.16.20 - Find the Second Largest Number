@@ -1,0 +1,36 @@
+Find the Second Largest Number
+Create a function that takes an array of numbers and returns the second largest number.
+
+Examples
+secondLargest([10, 40, 30, 20, 50]) ➞ 40
+
+secondLargest([25, 143, 89, 13, 105]) ➞ 105
+
+secondLargest([54, 23, 11, 17, 10]) ➞ 23
+
+https://edabit.com/challenge/3zAT89ZAxg4CAQqsZ
+
+My Solution
+
+function secondLargest(arr) {
+	let first = 0;
+	let index = 0;
+	let second = 0;
+	
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > first) {
+			first = arr[i]
+			index = [i]
+		}
+	}
+	
+	arr.splice(index, 1)
+	
+	for (let j = 0; j < arr.length; j++) {
+		if (arr[j] > second) {
+			second = arr[j]
+		}
+	}
+	
+	return second
+}
