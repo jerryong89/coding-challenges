@@ -1,0 +1,33 @@
+Integer Digits Count
+Create a function that counts the integer's number of digits.
+
+Examples
+count(318) ➞ 3
+ 
+count(-92563) ➞ 5
+ 
+count(4666) ➞ 4
+
+count(-314890) ➞ 6
+
+count(654321) ➞ 6
+
+count(638476) ➞ 6
+Notes
+For an added challenge, try to solve this without using strings.
+Optionally, you can solve this via a recursive approach.
+A recursive version of this challenge can be found here.
+
+https://edabit.com/challenge/wv6p5WR648oG6mTZx
+
+My Solution
+
+function count(n) {
+ let copy = `${n}`
+ 
+ for (let i = 0; i < copy.length; i++) {
+	 if (copy[0] === "-") {
+		 return copy.length -1
+	 } else return copy.length
+ }
+}
