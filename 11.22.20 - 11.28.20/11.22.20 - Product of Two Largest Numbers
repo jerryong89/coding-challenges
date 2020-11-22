@@ -1,0 +1,30 @@
+Product of Two Largest Numbers
+Create a function that takes an array and returns the product of the largest and second largest number.
+
+Examples
+product([2, 3, 1, -1, 2]) ➞ 6
+// 2 * 3 = 6
+
+product([-2, -2, -1, -1]) ➞ 2
+// -2 * - 1 = 2
+
+product([8, 8, 8]) ➞ 64
+// 8 * 8 = 64
+
+product([2, 8, 8, 8]) ➞ 16
+// 2 * 8 = 16
+Notes
+The numbers in the array are all integers.
+
+https://edabit.com/challenge/EvtvuXcMii75MWfvJ
+
+My Solution
+
+function product(arr) {
+	arr.sort((a, b) => b - a)
+	let copy = [...new Set(arr)]
+	
+	if (copy.length === 1) {
+		return copy[0] * copy[0]
+	} else  {return copy[0] * copy[1] }
+}
