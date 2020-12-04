@@ -1,0 +1,26 @@
+Jay and Silent Bob Weight Convertor
+Jay and Silent Bob have been given a fraction of an ounce but they only understand grams. Convert a fraction passed as a string to grams with up to two decimal places. An ounce weighs 28 grams.
+
+Examples
+jayAndBob("half") ➞ "14 grams"
+
+jayAndBob("quarter") ➞ "7 grams"
+
+jayAndBob("eighth") ➞ "3.5 grams"
+Notes
+Add the string "grams" to the end with a space.
+
+https://edabit.com/challenge/6DJKnHKELiAnf6tF8
+
+My Solution
+
+function jayAndBob(str) {
+	let obj = {
+		half : "14 grams",
+		quarter : "7 grams",
+		eighth : "3.5 grams",
+		sixteenth : "1.75 grams"
+	}
+	
+	return obj[`${str}`]
+}
