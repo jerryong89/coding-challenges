@@ -1,0 +1,30 @@
+Rotate Max Number
+Create a function which takes a number and returns the maximum value by rearranging its digits.
+
+Examples
+rotateMaxNumber(123) ➞ 321
+
+rotateMaxNumber("001") ➞ 100
+
+rotateMaxNumber(999) ➞ 999
+
+https://edabit.com/challenge/NJQ64N6xhrppEMkjY
+
+My Solution
+
+function rotateMaxNumber(num){
+  let string = num + ""
+	let array = []
+	let number = ""
+	
+	for (let i = 0; i < string.length; i++) {
+		array.push(string[i])
+	}
+ 	array.sort()
+
+	for (let i = string.length - 1 ; i >= 0; i--) {
+		number += array[i]	
+	}
+	
+	return number * 1
+}
