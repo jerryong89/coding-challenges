@@ -1,0 +1,41 @@
+String Slice-athon
+This challenge has five miniature exercises to help practice proficiency in string slicing. Check the examples below for a visual indicator of how to slice the strings. Good luck!
+
+Examples
+const s = "abcdefghijklmnopqrstuvwxyz"
+challenge1(s) ➞ "abcde"
+
+challenge2(s) ➞ "vwxyz"
+
+challenge3(s) ➞ "zyxwvutsrqponmlkjihgfedcba"
+
+challenge4(s) ➞ "fedcba"
+
+challenge5(s) ➞ "tvxz"
+Notes
+Check the Tests tab for more examples.
+See the Resources tab for further information on learning string slicing.
+
+https://edabit.com/challenge/CFswwYtpKgSvMuYcS
+
+My Solution
+
+function challenge1(s) {
+	return s.slice(0, 5);
+}
+
+function challenge2(s) {
+	return s.slice(s.length - 5);
+}
+	
+function challenge3(s) {
+	return s.split("").reverse().join("");
+}
+	
+function challenge4(s) {
+	return s.slice(0, 6).split("").reverse().join("");
+}
+	
+function challenge5(s) {
+	return s.slice(s.length - 7).split("").filter((x, index) => index % 2 === 0).join("");
+}
