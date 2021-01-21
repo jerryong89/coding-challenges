@@ -11,7 +11,7 @@ operate(7, 10, "-") ➞ -3
 operate(20, 10, "%") ➞ 0
 // 20 % 10 = 0
 Notes
-There will not be any divisions by zero.
+There will not be any divisions by zero
 
 https://edabit.com/challenge/7Qx4M32b94h3P4dyt
 
