@@ -1,0 +1,25 @@
+Greater than 5
+Write a function that determines the sum of the elements in the array that is greater than 5.
+
+Examples
+sumFive([1,5,20,30,4,9,18]) ➞ 77
+
+sumFive([1,2,3,4]) ➞ 0
+
+sumFive([10,12,28,47,55,100]) ➞ 252
+
+https://edabit.com/challenge/zHutBxQaWvzhzGgxL
+
+My Solution
+
+function sumFive(arr) {
+	let count = 0
+	
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > 5) {
+			count += arr[i]
+		}
+	}
+	
+	return count
+}
