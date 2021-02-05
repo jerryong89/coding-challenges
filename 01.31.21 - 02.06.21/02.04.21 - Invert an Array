@@ -1,0 +1,25 @@
+Invert an Array
+Create a function which takes an array of number arr and returns inverted array.
+
+Examples
+invertArray([1, 2, 3, 4, 5])) ➞ [-1, -2, -3, -4, -5]
+
+invertArray([1, -2, 3, -4, 5] ➞ [-1, 2, -3, 4, -5]
+
+invertArray([]) ➞ []
+
+https://edabit.com/challenge/5L368ypvh5ZZ2HJSL
+
+My Solution
+
+function invertArray(arr){
+  let newArray = []
+	
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === 0) {
+			newArray.push(0)
+		} else newArray.push(arr[i] * -1)
+	}
+	
+	return newArray
+}
