@@ -18,23 +18,23 @@ https://edabit.com/challenge/uScx6aGXmNu27NYWz
 My Solution
 
 function getFrequencies(arr) {
-	if (arr.length === 0){
-		return {}
-	} 
-	
-	let reducedArray = [...new Set(arr)]
-	let newArray = []
-	let count = 0
-	
-	for (let i = 0; i < reducedArray.length; i++) {
-		for (let j = 0; j < arr.length; j++) {
-			if (arr[j] === arrCopy[i]) {
-				count++
-			}
-		}
-		newArray.push([arrCopy[i],count])
-		count = 0
-	}	
-	
-	 return Object.fromEntries(newArray)
+  if (arr.length === 0){
+    return {}
+  } 
+  
+  let reducedArray = [...new Set(arr)]
+  let newArray = []
+  let count = 0
+  
+  for (let i = 0; i < reducedArray.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] === reducedArray[i]) {
+        count++
+      }
+    }
+    newArray.push([reducedArray[i],count])
+    count = 0
+  } 
+  
+   return Object.fromEntries(newArray)
 }
