@@ -15,7 +15,7 @@ The object should be in the same order as in the input array.
 
 https://edabit.com/challenge/uScx6aGXmNu27NYWz
 
-My Solution
+My Solution.
 
 function getFrequencies(arr) {
   if (arr.length === 0){
