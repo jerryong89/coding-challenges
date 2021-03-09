@@ -14,7 +14,7 @@ The returned array must be sorted in ascending order.
 
 https://edabit.com/challenge/fzF6JqF7JjtJok9jY
 
-My Solution
+My Solution 
 
 function largestNumbers(n, arr) {
 	let array = []
