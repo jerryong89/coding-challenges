@@ -1,0 +1,41 @@
+All Rotations of a String
+Create a left rotation and a right rotation function that returns all the left rotations and right rotations of a string.
+
+Examples
+leftRotations("abc") ➞ ["abc", "bca", "cab"]
+
+rightRotations("abc") ➞ ["abc", "cab", "bca"]
+
+leftRotations("abcdef") 
+➞ ["abcdef", "bcdefa", "cdefab", "defabc", "efabcd", "fabcde"]
+
+rightRotations("abcdef") 
+➞ ["abcdef", "fabcde", "efabcd", "defabc", "cdefab", "bcdefa"]
+
+https://edabit.com/challenge/XoBFQ9CJDBFEKEAj9
+
+My Solution
+
+function leftRotations(str) {
+	let split = str.split("")
+	let array = [str]
+
+	for (let i = 0; i < str.length - 1; i++) {
+		split.push(split.shift())
+		array.push(split.join(""))
+	}
+	
+	return array
+}
+
+function rightRotations(str) {
+	let split = str.split("")
+	let array = [str]
+
+	for (let i = 0; i < str.length - 1; i++) {
+		split.unshift(split.pop())
+		array.push(split.join(""))
+	}
+	
+	return array
+}
