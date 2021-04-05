@@ -1,0 +1,38 @@
+Luke, I Am Your ...
+Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
+
+Person	Relation
+Darth Vader	father
+Leia	sister
+Han	brother in law
+R2D2	droid
+Examples
+relationToLuke("Darth Vader") ➞ "Luke, I am your father."
+
+relationToLuke("Leia") ➞ "Luke, I am your sister."
+
+relationToLuke("Han") ➞ "Luke, I am your brother in law."
+
+https://edabit.com/challenge/Ac8GiJBAzEJYmcqyF
+
+My Solution
+
+function relationToLuke(name) {
+	let starwars = {darth: "Luke, I am your father.",
+								 	leia: "Luke, I am your sister.",
+									han: "Luke, I am your brother in law.",
+									r2d2: "Luke, I am your droid."
+								 }
+	if ( name === "Darth Vader" ) {
+		return `${starwars.darth}`
+	}
+		if ( name === "Leia" ) {
+		return `${starwars.leia}`
+	}
+		if ( name === "Han" ) {
+		return `${starwars.han}`
+	}
+		if ( name === "R2D2" ) {
+		return `${starwars.r2d2}`
+	}
+}
