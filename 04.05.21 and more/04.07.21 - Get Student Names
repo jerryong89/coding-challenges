@@ -1,0 +1,17 @@
+Get Student Names
+Create a function that takes an object of student names and returns an array of student names in alphabetical order.
+
+Examples
+getStudentNames({
+  "Student 1" : "Steve",
+  "Student 2" : "Becky",
+  "Student 3" : "John"
+}) ➞ ["Becky", "John", "Steve"]
+
+https://edabit.com/challenge/WikWd2QhrLbuNLYQ5
+
+My Solution
+
+function getStudentNames(students) {
+	return Object.values(students).sort()
+}
