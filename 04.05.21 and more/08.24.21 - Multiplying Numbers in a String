@@ -13,5 +13,5 @@ multiplyNums("10, -2") ➞ -20
 https://edabit.com/challenge/TzxoYExuxuQw2ahWR
 
 function multiplyNums(nums) {
-	return nums.split(",").reduce((accumulator, currentValue) => accumulator * currentValue)
+	return nums.split(",").reduce((accumulator, currentValue) => accumulator * currentValue) * 1
 }
